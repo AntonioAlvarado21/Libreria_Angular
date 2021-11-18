@@ -11,26 +11,6 @@ section.books {
     align-items: center;
 }
 
-.card{
-    margin-top: 10px;
-    margin-right: 10px;
-    margin-left: 10px;
-    min-height: 180px;
-    min-width: 400px;
-    max-width: 400px;
-    height: 100%;
-    
-}
-
-
-button {
-    width: 100%;
-}
-
-.titulo{
-    text-align: center;
-}
-
 h1{
     margin-top: 10px;
     display: inline-block;

@@ -5,6 +5,8 @@ import { Component } from '@angular/core';
   template: `
 <mat-toolbar color="primary">
   <span>Libreria Mayorista Luna</span>
+  <span class="spacer"></span>
+  <app-cart></app-cart>
 </mat-toolbar> 
 `,
   styleUrls: ['./header.component.css']

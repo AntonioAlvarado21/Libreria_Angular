@@ -9,12 +9,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { PrincipalComponent } from './pages/principal/principal.component';
 import { HttpClientModule} from '@angular/common/http';
+import { CartComponent } from './shared/components/header/cart/cart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    PrincipalComponent
+    PrincipalComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
