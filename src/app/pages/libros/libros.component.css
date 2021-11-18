@@ -36,3 +36,9 @@ h1::before{
 h1::after{
     right: -140px;
 }
+
+.titulo-final{
+    text-align: center;
+    font-size: 18px;
+
+}
