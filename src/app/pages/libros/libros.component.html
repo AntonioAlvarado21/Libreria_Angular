@@ -1,0 +1,24 @@
+<body>
+<h1 class="titulo">CATALOGO DE LIBROS </h1>
+
+<section class="books">
+    <mat-card class="card" *ngFor="let libro of libros">
+        <mat-card-header>
+        <mat-card-title>{{libro.titulo}}</mat-card-title>
+        <mat-card-subtitle>{{libro.autor}}</mat-card-subtitle>
+        </mat-card-header>
+
+        <div class="box">
+        <img mat-card-image src={{libro.link}}>
+        </div>
+        <mat-card-content>
+            <h3>{{libro.descripcion}}</h3>
+        </mat-card-content>
+
+        <mat-card-actions>
+            <button mat-flat-button color="primary"><mat-icon>book</mat-icon>Ordenar - {{libro.precio | currency}}</button>
+        </mat-card-actions>
+
+    </mat-card>
+</section>
+</body>
