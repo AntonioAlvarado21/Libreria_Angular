@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-header',
   template: `
 <mat-toolbar color="primary">
-  <span>Libreria Mayorista Luna</span>
+  <span><mat-icon>stars</mat-icon> Libreria Mayorista Luna <mat-icon>stars</mat-icon> </span>
   <span class="spacer"></span>
   <app-cart></app-cart>
 </mat-toolbar> 
