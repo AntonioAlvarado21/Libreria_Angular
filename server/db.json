@@ -38,7 +38,7 @@
       "autor": "John Scalzi",
       "precio": 450,
       "descripcion": "Nos cuenta las aventuras de John Perry, un anciano de 75 años de Ohio que decide enrolarse en las FDC",
-      "stock": 10,
+      "stock": 8,
       "link": "https://www.todoliteratura.es/fotos/1/la_vieja_guardia.jpg"
     },
     {
@@ -291,6 +291,26 @@
       },
       "fecha": "19/11/2021",
       "id": 11
+    },
+    {
+      "cliente": {
+        "id": 5,
+        "nombre": "Libreria Dorada",
+        "ciudad": "Apizaco",
+        "estado": "Tlaxcala"
+      },
+      "fecha": "19/11/2021",
+      "id": 12
+    },
+    {
+      "cliente": {
+        "id": 2,
+        "nombre": "Libreria Alcalá",
+        "ciudad": "Naucalpan de Juarez",
+        "estado": "Estado de Mexico"
+      },
+      "fecha": "19/11/2021",
+      "id": 13
     }
   ],
   "detailsOrders": [
@@ -420,6 +440,20 @@
         }
       ],
       "id": 12
+    },
+    {
+      "details": [
+        {
+          "productId": 11,
+          "productName": "Cuentos para pensar",
+          "quantity": 2
+        }
+      ],
+      "id": 13
+    },
+    {
+      "details": [],
+      "id": 14
     }
   ]
 }

@@ -7,6 +7,7 @@ import { Details, Ordenes } from 'src/app/shared/components/header/interfaces/or
 import { DataService } from 'src/app/shared/components/header/services/data.service';
 import { ShoppingCartService } from 'src/app/shared/components/header/services/shopping-cart.service';
 import { Libro } from '../libros/interface/libro.interface';
+import { LibrosService } from '../libros/services/libros.service';
 
 @Component({
   selector: 'app-checkout',
@@ -30,7 +31,8 @@ export class CheckoutComponent implements OnInit {
   constructor(
     private dataSvc:DataService,
     private shoppingCartSvc: ShoppingCartService,
-    private router:Router) { }
+    private router:Router,
+    private libroSvc:LibrosService) { }
 
   ngOnInit(): void {
     this.getClientes();
@@ -83,8 +85,12 @@ export class CheckoutComponent implements OnInit {
   private prepareDetails(): Details[]{
     const details: Details[] = [];
     this.cart.forEach((libro:Libro) => {
-      const { id:productId, titulo:productName, qty:quantity} = libro;
-      details.push({productId,productName,quantity});
+      const { id:productId, titulo:productName, qty:quantity,stock} = libro;
+      const updateStock = (stock-quantity);
+      this.libroSvc.updateStock(productId,updateStock).pipe(
+        tap(() => details.push({productId,productName,quantity}))
+      ).subscribe()
+
     })
     return details;
 

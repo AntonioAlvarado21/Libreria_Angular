@@ -18,7 +18,7 @@ export class LibrosComponent implements OnInit {
 
     this.librosSvc.getLibros()
     .pipe(
-      tap((libros: Libro[]) => this.libros = libros)
+      tap((libros: Libro[]) => this.libros = libros),
     )
     .subscribe();
 
