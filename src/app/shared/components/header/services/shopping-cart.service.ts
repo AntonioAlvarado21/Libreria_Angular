@@ -32,6 +32,12 @@ export class ShoppingCartService{
         this.calcTotal();
     }
 
+    resetCart():void{
+      this.nomLibro.next([]);
+      this.totalLibro.next(0);
+      this.cantidadLibro.next(0);
+    }
+
 
     private addToCart(libro: Libro):void{
 
@@ -56,5 +62,6 @@ export class ShoppingCartService{
         const total = this.libros.reduce((acc,lib) => acc+=(lib.precio * lib.qty),0);
         this.totalLibro.next(total);
     }
+
 
 }
