@@ -2,7 +2,7 @@
 <h1 class="titulo"><b>CATALOGO DE LIBROS</b></h1>
 
 <section class="books">
-<app-libro 
+<app-libro
     (addToCartClick)="addToCart($event)"
     [libro]="libro" *ngFor="let libro of libros"></app-libro>
 </section>

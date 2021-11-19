@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   <span class="mouseHover" (click)="goToMain()"><mat-icon>stars</mat-icon> Libreria Mayorista Luna <mat-icon>stars</mat-icon> </span>
   <span class="spacer"></span>
   <app-cart class="mouseHover" (click)="goToCheckout()"></app-cart>
-</mat-toolbar> 
+</mat-toolbar>
 `,
   styleUrls: ['./header.component.css']
 })
