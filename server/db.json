@@ -38,7 +38,7 @@
       "autor": "John Scalzi",
       "precio": 450,
       "descripcion": "Nos cuenta las aventuras de John Perry, un anciano de 75 años de Ohio que decide enrolarse en las FDC",
-      "stock": 8,
+      "stock": 6,
       "link": "https://www.todoliteratura.es/fotos/1/la_vieja_guardia.jpg"
     },
     {
@@ -47,7 +47,7 @@
       "autor": "George Orwell",
       "precio": 200,
       "descripcion": "El tema principal de la obra 1984 es la libertad. \nEl autor ha inventado un mundo imaginario exagerando algunas cosas para que nos podamos dar cuenta de lo importante que es la libertad.",
-      "stock": 15,
+      "stock": 14,
       "link": "https://images-na.ssl-images-amazon.com/images/I/51rXrmHv51L._SX328_BO1,204,203,200_.jpg"
     },
     {

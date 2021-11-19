@@ -36,6 +36,7 @@ export class ShoppingCartService{
       this.nomLibro.next([]);
       this.totalLibro.next(0);
       this.cantidadLibro.next(0);
+      this.libros=[];
     }
 
 
