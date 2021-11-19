@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { tap } from 'rxjs';
+import { Cliente } from 'src/app/shared/components/header/interfaces/clientes.interface';
+import { DataService } from 'src/app/shared/components/header/services/data.service';
 
 @Component({
   selector: 'app-checkout',
@@ -14,25 +17,26 @@ export class CheckoutComponent implements OnInit {
     estado: ''
   };
 
-  clientes = [
-    {
-      id: 1,
-      nombre: 'Moderna',
-      estado: 'CDMX'
-    },
-    {
-      id: 2,
-      nombre: 'Kaiser',
-      estado: 'CDMX'
-    }
-  ]
-  constructor() { }
+  clientes: Cliente[] = [ ]
+  constructor(private dataSvc:DataService) { }
 
   ngOnInit(): void {
+    this.getClientes();
   }
 
   tipoCliente(value:boolean):void{
     console.log(value);
+  }
+
+  onSubmit():void{
+    console.log('Guardar')
+  }
+
+  getClientes():void{
+    this.dataSvc.getClientes()
+    .pipe(
+      tap((clientes:Cliente[]) => this.clientes = clientes))
+    .subscribe()
   }
 
 }

@@ -1,16 +1,20 @@
 body{
   text-align: center;
   background-color: rgb(255, 251, 245);
+
 }
 
 
 .container__table{
   width: 80%;
   margin: 0 20%;
+
 }
 
 .table{
   font-size: 1.2rem;
+  align-content: center;
+  align-self: center;
 
 }
 

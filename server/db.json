@@ -27,11 +27,11 @@
       {
         "id": 5,
         "nombre": "Libreria Dorada",
-        "address": "Apizaco",
-        "city": "Tlaxcala"
+        "ciudad": "Apizaco",
+        "estado": "Tlaxcala"
       }
     ],
-    
+
     "libros": [
       {
         "id": 1,

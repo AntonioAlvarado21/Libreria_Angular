@@ -7,4 +7,5 @@ export interface Libro {
     descripcion: string;
     stock: number;
     link: string;
+    qty: number;
 }

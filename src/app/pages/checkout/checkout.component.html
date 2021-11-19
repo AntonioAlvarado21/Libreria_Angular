@@ -1,6 +1,6 @@
 <body>
 <div class="container">
-  <form class="form item">
+  <form class="form item" (ngSubmit)="onSubmit()" #checkoutForm="ngForm">
 
     <h1>Bienvenido a la sección de pedido!</h1>
 
@@ -47,7 +47,7 @@
 </div>
 
 <app-details></app-details>
-
+<br><br><br><br>
 <!--Boton de PEDIR-->
 <div class="container_button">
   <button
