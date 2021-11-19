@@ -15,7 +15,7 @@ import { MaterialModule } from 'src/app/material.module';
     CommonModule,
     CheckoutRoutingModule,
     FormsModule,
-    MaterialModule
+    MaterialModule,
   ]
 })
 export class CheckoutModule { }

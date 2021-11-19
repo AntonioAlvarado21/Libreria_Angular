@@ -1,18 +1,58 @@
-<!-- FORMULARIO DE COMPRADOR-->
-
 <div class="container">
-    <form>
-        <mat-form-field>
-            <input
-            matInput
-            placeholder="Name"
-            required
-            [(ngModel)]="model.name"
-            name="name"
-            #name="ngModel"
-            >
-        </mat-form-field>
+  <form class="form item">
 
+    <h1>Bienvenido a la sección de pedido!</h1>
 
-    </form>
+    <mat-radio-group class="form__element">
+      <h3>A continuación selecciona el tipo de cliente al que perteneces: </h3>
+      <mat-radio-button value="clienteVip" (change)="tipoCliente(false)">Cliente Nuevo</mat-radio-button>
+      <mat-radio-button value="clienteNuevo" (change)="tipoCliente(true)">Cliente VIP</mat-radio-button>
+    </mat-radio-group>
+
+    <mat-form-field class="form__element">
+      <input
+        matInput
+        placeholder="Nombre de tienda"
+        [(ngModel)]="model.store"
+        name="store"
+        #store="ngModel"/>
+    </mat-form-field>
+
+    <mat-form-field class="form__element">
+      <input
+        matInput
+        placeholder="Delegacion"
+        [(ngModel)]="model.delegacion"
+        name="delegacion"
+        #delegacion="ngModel"/>
+    </mat-form-field>
+
+    <mat-form-field class="form__element">
+      <input
+        matInput
+        placeholder="Estado"
+        [(ngModel)]="model.estado"
+        name="estado"
+        #estado="ngModel"/>
+    </mat-form-field>
+
+    <mat-form-field class="form__element">
+      <mat-label>Selecciona tu local de encargo </mat-label>
+      <mat-select name="cliente" #cliente="ngModel" [(ngModel)]="model.estado">
+        <mat-option [value]="cliente" *ngFor="let cliente of clientes"> {{cliente.nombre}} - {{cliente.estado}} </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
+</div>
+
+<!--Boton de PEDIR-->
+<div class="container_button">
+  <button
+    [disabled]=""
+    mat-raised-button
+    color="primary"
+    type="submit"
+  >
+  Hacer pedido
+  </button>
 </div>
