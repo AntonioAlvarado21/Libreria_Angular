@@ -14,8 +14,10 @@ export class CheckoutComponent implements OnInit {
     name:'Default',
     store: '',
     delegacion: '',
-    estado: ''
+    estado: '',
   };
+
+  clienteNuevo =  false;
 
   clientes: Cliente[] = [ ]
   constructor(private dataSvc:DataService) { }
@@ -25,7 +27,7 @@ export class CheckoutComponent implements OnInit {
   }
 
   tipoCliente(value:boolean):void{
-    console.log(value);
+    this.clienteNuevo = value;
   }
 
   onSubmit():void{
