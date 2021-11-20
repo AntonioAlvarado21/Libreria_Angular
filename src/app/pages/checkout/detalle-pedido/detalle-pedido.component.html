@@ -1,1 +1,12 @@
-<p>detalle-pedido works!</p>
+<body>
+
+<h1>Pedidos solicitados: </h1>
+<div class="clase" *ngFor="let o of ordenes">
+  <h3>{{o | json}}</h3>
+  <div class="clase2">
+    <h3 *ngFor="let d of det">{{d | json}}</h3>
+  </div>
+
+
+</div>
+

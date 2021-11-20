@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { DetallePedidoRoutingModule } from './detalle-pedido-routing.module';
 import { DetallePedidoComponent } from './detalle-pedido.component';
-
+import { MatFormFieldControl } from '@angular/material/form-field';
+import { MaterialModule } from 'src/app/material.module';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import { DetallePedidoComponent } from './detalle-pedido.component';
   ],
   imports: [
     CommonModule,
-    DetallePedidoRoutingModule
+    DetallePedidoRoutingModule,
+    MaterialModule
   ]
 })
 export class DetallePedidoModule { }

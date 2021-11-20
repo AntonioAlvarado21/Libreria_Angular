@@ -1,6 +1,7 @@
 import { Injectable } from "@angular/core";
 import { BehaviorSubject, Observable } from "rxjs";
 import { Libro } from "src/app/pages/libros/interface/libro.interface";
+import { Details, DetailsOrder, Ordenes } from "../interfaces/ordenes.interface";
 
 @Injectable({
     providedIn: 'root'
@@ -12,7 +13,10 @@ export class ShoppingCartService{
     private nomLibro = new BehaviorSubject<Libro[]>([]);
     private totalLibro = new BehaviorSubject<number>(0);
     private cantidadLibro = new BehaviorSubject<number>(0);
-
+    ////////////
+    private detalle = new BehaviorSubject<Details[]>([]);
+    private detalleAction = new BehaviorSubject<DetailsOrder[]>([]);
+    private ordenes = new BehaviorSubject<Ordenes[]>([]);
 
     get totalAction$():Observable<number>{
         return this.totalLibro.asObservable();
@@ -25,6 +29,18 @@ export class ShoppingCartService{
     get cartAction$():Observable<Libro[]>{
         return this.nomLibro.asObservable();
     }
+    //////////////
+    get detalles$():Observable<Details[]>{
+      return this.detalle.asObservable();
+    }
+    get detalleAction$():Observable<DetailsOrder[]>{
+      return this.detalleAction.asObservable();}
+
+    get ordenes$():Observable<Ordenes[]>{
+      return this.ordenes.asObservable();
+
+    }
+
 
     updateCart(libro: Libro):void{
         this.addToCart(libro);

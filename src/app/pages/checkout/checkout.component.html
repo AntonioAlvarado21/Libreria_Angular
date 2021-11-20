@@ -5,7 +5,6 @@
     <h1>Bienvenido a la sección de pedido!</h1>
 
     <mat-radio-group class="form__element">
-      {{clienteNuevo}} - Es cliente VIP?
       <h3>A continuación selecciona el tipo de cliente al que perteneces: </h3>
       <mat-radio-button value="clienteVIP" (change)="tipoCliente(true)" checked>Cliente VIP</mat-radio-button>
       <mat-radio-button value="clienteNuevo" (change)="tipoCliente(false)">Cliente Nuevo</mat-radio-button>

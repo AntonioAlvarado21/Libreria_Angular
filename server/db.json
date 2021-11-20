@@ -215,37 +215,6 @@
   ],
   "ordenes": [
     {
-      "nombre": "Libreria Moderna",
-      "ciudad": "Iztacalco",
-      "estado": "CDMX",
-      "fecha": "17/11/2021",
-      "disponible": true,
-      "id": 1
-    },
-    {
-      "cliente": false,
-      "id": 2
-    },
-    {
-      "cliente": false,
-      "id": 3
-    },
-    {
-      "store": "Prueba",
-      "delegacion": "Uno",
-      "estado": "Dos",
-      "cliente": true,
-      "id": 4
-    },
-    {
-      "cliente": false,
-      "id": 5
-    },
-    {
-      "cliente": false,
-      "id": 6
-    },
-    {
       "cliente": {
         "id": 2,
         "nombre": "Libreria Alcalá",

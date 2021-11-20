@@ -13,7 +13,7 @@ export interface Ordenes{
   ciudad: string;
   estado: string;
   fecha: string;
-  disponible: boolean;
+  cliente: Cliente[];
 
 }
 
@@ -21,4 +21,12 @@ export interface Ordenes{
 export interface DetailsOrder{
   details: Details[];
   orderId: number;
+}
+
+
+export interface Cliente{
+  nombre: string;
+  ciudad: string;
+  estado: string;
+  fecha: string;
 }
